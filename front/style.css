@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Kenia&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold
+}
+
+img {
+  border: 5px solid black;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+  border-radius: 16px;
+}
+
+body {
+  background-color: #f1f1f1;
+  height: 2000px;
+}
+
+nav {
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background: linear-gradient(90deg, #ffffff, #000000);
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  opacity: 0.95;
+}
+
+.links {
+  margin-left: 3rem;
+}
+
+nav:hover {
+  background: linear-gradient(90deg, #000000, #ffffff);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(0px);
+}
+
+nav a.logo {
+  font-size: 33px;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+nav a.logo:hover {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.6),
+                 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1),
+                 0 0 25px rgba(255, 255, 255, 0.8),
+                 0 0 40px rgba(255, 255, 255, 0.6);
+  }
+}
+
+nav .links a {
+  color: #fff;
+  font-weight: bold;
+  margin-right: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav .links a {
+  color: #fff;
+  font-weight: bold;
+  margin-right: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav .links a:hover {
+  color: rgb(118, 124, 133);
+  transform: scale(1.1);
+  text-shadow: 0 0 5px rgba(118, 124, 133, 0.8);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+
+nav .links a:not(:last-child) {
+  margin-right: 20px;
+}
+
+nav .login button {
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+nav .login button,.signup {
+  background-color: #000;
+  color: #fff;
+  border-radius: 16px;
+  margin-left: 14px;
+}
+
+header {
+  position: relative;
+  padding: 500px 80px;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .left {
+  text-align: center;
+}
+
+header .left h1 {
+  font-size: 80px;
+}
+
+header .left h1 span {
+  color: #0f2182;
+}
+
+header .left p {
+  margin: 40px 0;
+  color: #fff;
+}
+
+header .left a {
+  display: flex;
+  align-items: center;
+  background: #000;
+  width: 200px;
+  padding: 8px;
+  border-radius: 60px;
+}
+
+header .left a i {
+  background-color: #fff;
+  font-size: 24px;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+header .left a span {
+  color: #fff;
+  margin-left: 10px;
+}
+
+
+h2.separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.sell-portfolio {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.sell-portfolio .item {
+  padding: 20px;
+  background: url("https://img.freepik.com/free-photo/japan-background-digital-art_23-2151546189.jpg?t=st=1734257186~exp=1734260786~hmac=194bd8535ca3190a64c4dd28a84ec3be5aae5415728ad87bcb4d5b75b1f2c469&w=1380");
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sell-portfolio .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sell-portfolio .item .header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sell-portfolio .item p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.portfolio-shop .portfolio-list .item {
+  padding: 20px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+  transition: all .3s ease;
+  
+}
+
+@media (max-width: 768px) {
+  .sell-portfolio {
+    flex-direction: column;
+    align-items: center;
+  }
+} 
+
+.portfolio-shop .portfolio-list .item:hover {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  gap: 15px;
+}
+
+.sell-portfolio .item .header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.sell-portfolio .item .header i {
+  font-size: 40px;
+}
+
+.sell-portfolio .item .header h5 {
+  font-size: 17px;
+  gap: 10px
+}
+
+.sell-portfolio .item p {
+  margin-top: 10px;
+  padding: 0 4px;
+}
+.portfolio-shop {
+  padding: 0 80px;
+  margin-top: 30px;
+}
+
+.portfolio-shop .category {
+  display: flex;
+  gap: 14px;
+}
+
+.portfolio-shop .category a {
+  background-color: #dfdcdc;
+  padding: 8px 14px;
+  font-size: 15px;
+  border-radius: 14px;
+  transition: all .3s ease;
+}
+
+.portfolio-shop .category a:hover {
+  color: #fff;
+  background-color: #0f2182;
+}
+
+.portfolio-shop .portfolio-list {
+  display: flex;
+  padding: 40px 0;
+  gap: 20px;
+}
+
+
+.portfolio-shop .portfolio-list .item .info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #edecec;
+  margin: 16px;
+}
+
+.portfolio-shop .portfolio-list .item .info h5 {  
+  display: flex;
+  justify-content: end;
+  width: 158px;
+  font-size: 18px;
+}
+
+.portfolio-shop .portfolio-list .item .info  .btc {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.portfolio-shop .portfolio-list .item .btc i {
+  font-size: 22px;
+  color: #304ffe;
+
+}
+
+.portfolio-shop .portfolio-list .item .btc p {
+  font-size: 12px;
+  color: #304ffe;
+}
+
+.bid {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #edecec;
+  margin: 16px;
+}
+
+.button-x {
+  display: flex;
+  justify-content: center;
+}
+
+a .button-span {
+  display: block;
+  padding: 8px 16px;
+  color: #fff;
+}
+
+.button-a {
+  margin-left: 770px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.img-first {
+  position: absolute;
+  top: -250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 300px;
+  z-index: -1;
+  margin-left: 80px;
+}
+
+.video-class {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; 
+  margin-top: 0; 
+}
+
+.video-class video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto; 
+  height: auto;
+  z-index: -1;
+}
+
+
+.information {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.information h2 {
+  font-size: 2.5rem;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.image-container {
+  display: flex;  
+  justify-content: space-evenly;
+  gap: 80px; 
+  flex-wrap: wrap;
+  padding-bottom: 60px;
+}
+
+.image-container img {
+  width: 350px; 
+  height: 250px;
+  object-fit: cover; 
+  border-radius: 10px; 
+  transition: transform 0.5s ease, box-shadow 0.5s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.image-container img:hover {
+  transform: scale(1.2) rotate(5deg); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overlay {
+  overflow: hidden;
+  padding: 100px;
+  border-radius: 16px;
+  position: relative;
+  color: white;
+  font-family: 'Lato';
+  position: relative;
+  text-align: center;
+  z-index: 0;
+
+  border: 2.5px solid #000;
+
+}
+
+.overlay h1{
+  font-size: 64px;
+}
+
+.overlay p{
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+.overlay:before {
+  border-radius: 16px;
+  content: "";
+  filter: blur(10px);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.overlay:before {
+  background: url("https://cdn.hero.page/wallpapers/121fb583-c65c-4988-bd92-06e0e9b0ed2e-minimalist-mountain-peaks-wallpaper-wallpaper-1.png") no-repeat fixed 0 0 / cover;
+}
+header{
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+
+  background: url("https://cdn.hero.page/wallpapers/121fb583-c65c-4988-bd92-06e0e9b0ed2e-minimalist-mountain-peaks-wallpaper-wallpaper-1.png") no-repeat fixed 0 0 / cover;
+}
+
+.middle-body {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+              url("https://img.freepik.com/free-photo/japan-background-digital-art_23-2151546189.jpg?t=st=1734257186~exp=1734260786~hmac=194bd8535ca3190a64c4dd28a84ec3be5aae5415728ad87bcb4d5b75b1f2c469&w=1380") 
+              no-repeat fixed center / cover;
+  padding: 100px;
+  color: #000000;
+}
+
+
+.sell-portfolio .item {
+  border: 2.5px solid #000;
+  border-radius: 8px;
+}
+.button-a {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 680px;
+  margin-top: 30px;
+  margin-left: 710px;
+}
+
+.button-span {
+  background-color: #000;
+  color: #fff;
+  border-radius: 16px;
+  cursor: pointer;
+  width: 125px;
+}
+
+.history {
+  text-align: center;
+  margin: 25px;
+  padding: 25px;
+  font-weight: bold;
+}
+
+.animated-footer {
+  position: relative;
+  background: linear-gradient(90deg, #0f2182, #3a4fd7);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.animated-footer .footer-content {
+  position: relative;
+  z-index: 2;
+}
+
+.animated-footer a {
+  color: #ffdd57;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.animated-footer a:hover {
+  text-decoration: underline;
+}
+
+.animated-footer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-45deg);
+  animation: shine 3s infinite;
+  z-index: 1;
+}
+
+.sell-portfolio {
+  flex-direction: column;
+  align-items: center;
+}
+
+.sell-portfolio .item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 40px;
+  align-items: center;
+}
+
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+/* @media (min-width: 576px) and (max-width: 768px) {
+  .sell-portfolio {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .sell-portfolio .item {
+    width: 48%;
+  }
+
+  .image-container {
+    gap: 30px;
+  }
+
+  .image-container img {
+    width: 45%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .sell-portfolio {
+    justify-content: center;
+  }
+
+  .sell-portfolio .item {
+    width: 23%;
+  }
+
+  .image-container {
+    gap: 40px;
+  }
+
+  .image-container img {
+    width: 30%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  nav {
+    padding: 0 60px;
+  }
+
+  .sell-portfolio {
+    justify-content: center;
+  }
+
+  .sell-portfolio .item {
+    width: 23%;
+  }
+
+  .image-container {
+    gap: 50px;
+  }
+
+  .image-container img {
+    width: 28%;
+  }
+}
+
+@media (min-width: 1200px) {
+  nav {
+    padding: 0 100px;
+  }
+
+  .sell-portfolio {
+    justify-content: center;
+  }
+
+  .sell-portfolio .item {
+    width: 23%;
+  }
+
+  .image-container {
+    gap: 60px;
+  }
+
+  .image-container img {
+    width: 28%;
+  }
+} */

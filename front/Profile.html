@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAM1BMVEVHcEzEKSzEKCzEKS3EKS3EKS3EKS3EKS3EKS3EKSzEKS3EKS3EKS3EKS3EKS3EKS3EKC3l4wy/AAAAEXRSTlMAJBDD/9P2THE5ne/hiV2yB7Snq+cAAADtSURBVHgBrVIFYsUwCE3JgzTFev/TjuzL3FfBHdo/Pdv2oYo60OkDJcsYwu/rdszWJvZ3lXIseMgbJ1Y1eJWzOUy1x5OuI/dgZTCjUOyJvOkmoqAdDjP4YcUMzKsyUPFIYKOkBqHiELfW4e3MAo1KviOpwPaUc5pgiaoRguqU/jQ1QQ4QwX3BcUCezZHB8aSMDn7SuQXwFBYY5jfdiWhTkbQKOg/YVq2c9z5ptQI4nbtcW5n3VqIgZwcATr62fn0S3d1UIQoVc+/IZ4M3ANUOndUGAHuzN/EFXT5Y9lrZB8turGMo/+LAnk7z788DmOQH8HniNzUAAAAASUVORK5CYII=">
+    <title>Profile Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            color: #333;
+            margin: 0;
+        }
+
+        .profileContainer {
+            width: 90%;
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .profileContainer h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #555;
+            text-align: center;
+        }
+
+        .profileContainer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .profileContainer li {
+            font-size: 18px;
+            margin: 10px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .profileContainer li span {
+            color: #666;
+        }
+
+        .profileContainer button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background: #74ebd5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .profileContainer button:hover {
+            background: #5ac0c8;
+        }
+    </style>
+</head>
+<body>
+    <div class="profileContainer">
+        <h1>Profile Information</h1>
+        <ul>
+            <li>
+                <span>Name:</span>
+                <span>John Doe</span>
+            </li>
+            <li>
+                <span>Email:</span>
+                <span>john.doe@example.com</span>
+            </li>
+            <li>
+                <span>Phone:</span>
+                <span>+1 234 567 890</span>
+            </li>
+        </ul>
+        <button>Edit Profile</button>
+    </div>
+
+    <script src="./profile.js"></script>
+</body>
+</html>
